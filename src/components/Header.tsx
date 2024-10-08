@@ -1,12 +1,19 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import { useAppStore } from '../stores/useAppStore'
 
 export default function Header() {
   //usando useLocation para detectar la pagina en la que estamos
   const {pathname} = useLocation()
   //identificando si estoy en la pagina home
   const isHome = useMemo(() => pathname === '/' , [pathname])
-  console.log(isHome);
+  // console.log(isHome);
+
+  const fetchCategories = useAppStore((state) => state.fetchCategories)
+
+  useEffect(() => {
+    fetchCategories()
+  }, [])
   
 
   return (
