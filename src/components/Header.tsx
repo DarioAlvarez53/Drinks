@@ -1,4 +1,4 @@
-
+import { Link, NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -11,8 +11,15 @@ export default function Header() {
               </div>
 
               {/* Navegación */}
-              <nav>
-                
+              <nav className='flex gap-8'>
+                <Link 
+                  to="/"
+                  className='text-white uppercase font-bold'
+                >Inicio</Link>
+                <Link 
+                  to="/favvoritos"
+                  className='text-white uppercase font-bold'
+                >Favoritos</Link>
               </nav>
             </div>
         </div>
