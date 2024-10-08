@@ -5,15 +5,15 @@ export default function Header() {
     <header className="bg-slate-800">
         <div className="mx-auto container px-5 py-16">
             <div className="flex justify-between items-center">
-                {/* Logotipo */}
-                <div>
+              {/* Logotipo */}
+              <div>
+                <img className="w-32" src="/logo.svg" alt="Logotipo" />
+              </div>
 
-                </div>
-
-                {/* Navegación */}
-                <nav>
-                    
-                </nav>
+              {/* Navegación */}
+              <nav>
+                
+              </nav>
             </div>
         </div>
     </header>
